@@ -75,6 +75,24 @@
     .pillar__name { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
     .pillar__desc { font-size: 0.88rem; color: var(--grey); line-height: 1.65; }
 
+    /* ACADEMIA */
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin-top: 32px; }
+    .feature { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(73,72,238,0.06); display: flex; gap: 14px; align-items: flex-start; }
+    .feature__icon { font-size: 1.5rem; flex-shrink: 0; }
+    .feature__name { font-size: 0.98rem; font-weight: 800; margin-bottom: 4px; }
+    .feature__desc { font-size: 0.86rem; color: var(--grey); line-height: 1.6; }
+    .curriculum { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-top: 24px; }
+    .curriculum__item { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; font-size: 0.88rem; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 10px rgba(73,72,238,0.05); }
+    .curriculum__item span { color: var(--indigo); font-weight: 800; }
+    .subheading { font-size: 1.05rem; font-weight: 800; margin: 36px 0 6px; color: var(--ink); }
+    .subheading + p { font-size: 0.92rem; color: #444455; max-width: 780px; }
+
+    /* HERRAMIENTAS */
+    .tools-group { margin-top: 28px; }
+    .tools-group__title { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--indigo); margin-bottom: 12px; }
+    .tools { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tool { background: #fff; border: 1px solid var(--line); border-radius: 100px; padding: 9px 18px; font-size: 0.85rem; font-weight: 600; color: var(--ink); box-shadow: 0 2px 10px rgba(73,72,238,0.05); }
+
     /* CONTACT */
     .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 28px; max-width: 820px; }
     .contact-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(73,72,238,0.06); }
@@ -135,6 +153,8 @@
         <ul class="nav__links" id="navLinks">
           <li><a href="#quienes-somos">Quiénes Somos</a></li>
           <li><a href="#que-hacemos">Qué Hacemos</a></li>
+          <li><a href="#academia">La Academia</a></li>
+          <li><a href="#herramientas">Herramientas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
         <button class="nav__burger" id="navBurger" aria-label="Menú">☰</button>
@@ -234,6 +254,101 @@
             Una comunidad activa de emprendedores hispanos — "los púrpuras" — con acompañamiento, mentorías
             en vivo y una red de apoyo que convierte el aprendizaje en resultados.
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIA -->
+  <section id="academia">
+    <div class="container">
+      <div class="sec__kicker">La Academia</div>
+      <h2 class="sec__title">Una academia de aprendizaje <span class="grad">100% online y en español</span></h2>
+      <div class="sec__body">
+        <p>
+          El corazón de ELEIA es nuestra academia de formación en negocios digitales. Los estudiantes acceden
+          a un campus virtual con programas estructurados paso a paso, desde cero y sin necesidad de experiencia
+          técnica previa. Cada programa combina clases en video, plantillas y recursos descargables, mentorías
+          en vivo y una comunidad activa de acompañamiento.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature__icon">🎥</div>
+          <div>
+            <div class="feature__name">Clases en video paso a paso</div>
+            <div class="feature__desc">Lecciones grabadas y actualizadas de forma continua, organizadas en módulos progresivos dentro de nuestro campus virtual.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🗓️</div>
+          <div>
+            <div class="feature__name">Mentorías en vivo</div>
+            <div class="feature__desc">Sesiones grupales periódicas donde los estudiantes resuelven dudas directamente con nuestros mentores y equipo de expertos.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🟣</div>
+          <div>
+            <div class="feature__name">Comunidad de estudiantes</div>
+            <div class="feature__desc">Una red activa de emprendedores hispanos que comparten avances, resultados y apoyo mutuo durante todo el proceso.</div>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">💬</div>
+          <div>
+            <div class="feature__name">Soporte y acompañamiento</div>
+            <div class="feature__desc">Atención directa por WhatsApp y seguimiento del progreso de cada estudiante para que nadie se quede atascado.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subheading">Qué enseñamos</div>
+      <p>Nuestro plan de formación cubre todo el ciclo de un negocio digital, con la inteligencia artificial como herramienta transversal:</p>
+      <div class="curriculum">
+        <div class="curriculum__item"><span>→</span> Investigación de mercados digitales</div>
+        <div class="curriculum__item"><span>→</span> Creación de productos digitales con IA</div>
+        <div class="curriculum__item"><span>→</span> Copywriting y páginas de venta</div>
+        <div class="curriculum__item"><span>→</span> Embudos y estrategia de conversión</div>
+        <div class="curriculum__item"><span>→</span> Publicidad digital y tráfico pago</div>
+        <div class="curriculum__item"><span>→</span> Automatización y analítica de ventas</div>
+        <div class="curriculum__item"><span>→</span> Mentalidad y hábitos de emprendimiento</div>
+        <div class="curriculum__item"><span>→</span> Operación y escalamiento del negocio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERRAMIENTAS -->
+  <section id="herramientas">
+    <div class="container">
+      <div class="sec__kicker">Herramientas</div>
+      <h2 class="sec__title">Tecnología propia y las mejores <span class="grad">herramientas del mercado</span></h2>
+      <div class="sec__body">
+        <p>
+          Además de formar, construimos software. Desarrollamos herramientas propias con inteligencia artificial
+          para nuestros estudiantes y operamos toda nuestra infraestructura tecnológica internamente: campus
+          virtual, automatizaciones de acompañamiento, analítica de campañas y sistemas de soporte.
+        </p>
+      </div>
+      <div class="tools-group">
+        <div class="tools-group__title">Herramientas propias</div>
+        <div class="tools">
+          <div class="tool">🤖 AURA — asistente de IA para investigar, crear y adaptar productos digitales</div>
+          <div class="tool">💬 Automatizaciones de acompañamiento por WhatsApp</div>
+          <div class="tool">📊 Dashboards de analítica y seguimiento de campañas</div>
+        </div>
+      </div>
+      <div class="tools-group">
+        <div class="tools-group__title">Herramientas que enseñamos a dominar</div>
+        <div class="tools">
+          <div class="tool">ChatGPT</div>
+          <div class="tool">Gamma</div>
+          <div class="tool">Meta Ads</div>
+          <div class="tool">WhatsApp Business</div>
+          <div class="tool">Hotmart</div>
+          <div class="tool">Email marketing y CRM</div>
+          <div class="tool">Canva</div>
+          <div class="tool">CapCut</div>
         </div>
       </div>
     </div>
