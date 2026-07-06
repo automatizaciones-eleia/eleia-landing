@@ -93,6 +93,32 @@
     .tools { display: flex; flex-wrap: wrap; gap: 10px; }
     .tool { background: #fff; border: 1px solid var(--line); border-radius: 100px; padding: 9px 18px; font-size: 0.85rem; font-weight: 600; color: var(--ink); box-shadow: 0 2px 10px rgba(73,72,238,0.05); }
 
+    /* METODOLOGÍA */
+    .timeline { position: relative; margin: 32px 0 0; padding-left: 34px; max-width: 780px; }
+    .timeline::before { content: ''; position: absolute; left: 11px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(180deg, var(--indigo), var(--magenta)); }
+    .timeline__step { position: relative; margin-bottom: 30px; }
+    .timeline__step:last-child { margin-bottom: 0; }
+    .timeline__step::before { content: ''; position: absolute; left: -29px; top: 6px; width: 13px; height: 13px; border-radius: 50%; background: var(--indigo); border: 3px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+    .timeline__title { font-size: 1rem; font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+    .timeline__desc { font-size: 0.9rem; color: #444455; line-height: 1.7; margin: 0; }
+
+    /* COMPROMISO */
+    .promise-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; margin-top: 32px; }
+    .promise { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 24px 22px; box-shadow: 0 4px 16px rgba(73,72,238,0.06); position: relative; overflow: hidden; }
+    .promise::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--magenta), var(--cyan), var(--indigo)); }
+    .promise__icon { font-size: 1.6rem; margin-bottom: 10px; }
+    .promise__name { font-size: 0.98rem; font-weight: 800; margin-bottom: 6px; }
+    .promise__desc { font-size: 0.86rem; color: var(--grey); line-height: 1.65; }
+
+    /* FAQ */
+    .faq { max-width: 820px; margin-top: 28px; }
+    .faq details { background: #fff; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(73,72,238,0.05); overflow: hidden; }
+    .faq summary { cursor: pointer; padding: 18px 22px; font-size: 0.97rem; font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; font-size: 1.3rem; font-weight: 700; color: var(--indigo); flex-shrink: 0; }
+    .faq details[open] summary::after { content: '−'; }
+    .faq details p { padding: 0 22px 18px; font-size: 0.92rem; color: #444455; line-height: 1.75; margin: 0; }
+
     /* CONTACT */
     .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 28px; max-width: 820px; }
     .contact-card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(73,72,238,0.06); }
@@ -141,6 +167,19 @@
     "sameAs": ["https://www.metodoauraia.com"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "¿Qué es ELEIA y a qué se dedica?", "acceptedAnswer": {"@type": "Answer", "text": "ELEIA LLC es una compañía de educación digital y desarrollo de software con sede en Florida, Estados Unidos. Forma a emprendedores hispanohablantes en la creación y venta de productos digitales, y desarrolla herramientas con inteligencia artificial como AURA."}},
+      {"@type": "Question", "name": "¿Necesito experiencia previa para estudiar en la academia?", "acceptedAnswer": {"@type": "Answer", "text": "No. Los programas están diseñados para personas que parten desde cero, sin conocimientos técnicos ni experiencia en ventas digitales."}},
+      {"@type": "Question", "name": "¿Desde qué países puedo estudiar?", "acceptedAnswer": {"@type": "Answer", "text": "Desde cualquier país. La formación es 100% online y en español, con estudiantes en más de 51 países."}},
+      {"@type": "Question", "name": "¿Qué plataformas y herramientas se utilizan?", "acceptedAnswer": {"@type": "Answer", "text": "Plataformas de venta como Hotmart, Gumroad y Skool; herramientas de IA como ChatGPT y Gamma; publicidad en Meta Ads y automatización con WhatsApp Business, además de herramientas propias como AURA."}},
+      {"@type": "Question", "name": "¿Los programas tienen garantía?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, incluyen 7 días de garantía de devolución total del pago."}}
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -155,6 +194,8 @@
           <li><a href="#que-hacemos">Qué Hacemos</a></li>
           <li><a href="#academia">La Academia</a></li>
           <li><a href="#herramientas">Herramientas</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
         <button class="nav__burger" id="navBurger" aria-label="Menú">☰</button>
@@ -350,6 +391,107 @@
           <div class="tool">Canva</div>
           <div class="tool">CapCut</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOGÍA -->
+  <section id="metodologia">
+    <div class="container">
+      <div class="sec__kicker">Metodología</div>
+      <h2 class="sec__title">Un sistema probado, <span class="grad">en 5 pasos</span></h2>
+      <div class="sec__body">
+        <p>
+          Toda nuestra formación gira alrededor de una metodología propia, replicable y basada en evidencia:
+          identificar lo que ya funciona en mercados extranjeros, validarlo y llevarlo al mercado hispano con
+          ayuda de la inteligencia artificial. Así funciona el sistema que aplican nuestros más de 80.000 estudiantes:
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline__step">
+          <div class="timeline__title">1. Identificar productos virales en mercados extranjeros</div>
+          <p class="timeline__desc">Con herramientas específicas de investigación detectamos productos digitales con alta demanda en EE. UU., Canadá o Reino Unido que aún no tienen competencia fuerte en español.</p>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__title">2. Validar la demanda en el mercado hispano</div>
+          <p class="timeline__desc">Antes de crear nada, se confirma que existe audiencia real para ese tema en español. Esto elimina el riesgo de invertir tiempo en algo que nadie quiere comprar.</p>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__title">3. Crear el producto con IA en horas, no semanas</div>
+          <p class="timeline__desc">Con los flujos de inteligencia artificial que enseñamos, un ebook, mini-curso o plantilla puede estar listo en un día — sin conocimientos técnicos previos.</p>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__title">4. Publicar y vender en plataformas de distribución</div>
+          <p class="timeline__desc">Hotmart, Gumroad, Skool o una página propia. Enseñamos a configurar la tienda digital y a empezar a recibir pagos desde el primer día.</p>
+        </div>
+        <div class="timeline__step">
+          <div class="timeline__title">5. Escalar con afiliados y tráfico</div>
+          <p class="timeline__desc">Con las primeras ventas, el sistema enseña a crear redes de afiliados y campañas de tráfico que multiplican los resultados de forma sostenible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPROMISO -->
+  <section id="compromiso">
+    <div class="container">
+      <div class="sec__kicker">Nuestro compromiso</div>
+      <h2 class="sec__title">Transparencia con nuestros <span class="grad">estudiantes</span></h2>
+      <div class="promise-grid">
+        <div class="promise">
+          <div class="promise__icon">🛡️</div>
+          <div class="promise__name">Garantía de devolución</div>
+          <div class="promise__desc">Nuestros programas incluyen garantía de devolución total durante los primeros 7 días. Si el programa no es para ti, devolvemos el 100% sin preguntas.</div>
+        </div>
+        <div class="promise">
+          <div class="promise__icon">📢</div>
+          <div class="promise__name">Publicidad honesta</div>
+          <div class="promise__desc">Los resultados que mostramos son testimoniales reales de estudiantes y no garantizan resultados idénticos: dependen de la dedicación de cada persona.</div>
+        </div>
+        <div class="promise">
+          <div class="promise__icon">🔒</div>
+          <div class="promise__name">Datos protegidos</div>
+          <div class="promise__desc">Tratamos la información personal según nuestra política de privacidad. Los pagos se procesan por plataformas seguras como Hotmart; nunca almacenamos tarjetas.</div>
+        </div>
+        <div class="promise">
+          <div class="promise__icon">🤝</div>
+          <div class="promise__name">Acompañamiento real</div>
+          <div class="promise__desc">Detrás de cada programa hay un equipo humano: mentores, soporte por WhatsApp y una comunidad que acompaña a cada estudiante en su proceso.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="sec__kicker">Preguntas frecuentes</div>
+      <h2 class="sec__title">Resolvemos tus <span class="grad">dudas</span></h2>
+      <div class="faq">
+        <details>
+          <summary>¿Qué es ELEIA y a qué se dedica?</summary>
+          <p>ELEIA LLC es una compañía de educación digital y desarrollo de software con sede en Florida, Estados Unidos. Formamos a emprendedores hispanohablantes en la creación y venta de productos digitales, y desarrollamos herramientas con inteligencia artificial — como AURA — que facilitan ese proceso.</p>
+        </details>
+        <details>
+          <summary>¿Necesito experiencia previa para estudiar en la academia?</summary>
+          <p>No. Nuestros programas están diseñados para personas que parten desde cero, sin conocimientos técnicos ni experiencia en ventas digitales. Tenemos estudiantes de 18 a 65 años con resultados comprobados.</p>
+        </details>
+        <details>
+          <summary>¿Desde qué países puedo estudiar?</summary>
+          <p>Desde cualquier país. La formación es 100% online y en español, con estudiantes en más de 51 países: México, Colombia, Argentina, España, Chile, Perú, Ecuador, Estados Unidos y muchos más.</p>
+        </details>
+        <details>
+          <summary>¿Qué plataformas y herramientas se utilizan?</summary>
+          <p>Enseñamos a trabajar con plataformas de venta como Hotmart, Gumroad y Skool, herramientas de inteligencia artificial como ChatGPT y Gamma, publicidad en Meta Ads y automatización con WhatsApp Business — además de nuestras herramientas propias como AURA.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tiempo toma ver resultados?</summary>
+          <p>Depende de la dedicación de cada estudiante. Con 1-2 horas diarias se puede avanzar al ritmo del programa, y muchos estudiantes logran su primera venta en las primeras semanas. Los resultados son testimoniales y no están garantizados.</p>
+        </details>
+        <details>
+          <summary>¿Los programas tienen garantía?</summary>
+          <p>Sí. Nuestros programas incluyen 7 días de garantía de devolución total: si en la primera semana sientes que no es para ti, devolvemos el 100% del pago sin preguntas.</p>
+        </details>
       </div>
     </div>
   </section>
